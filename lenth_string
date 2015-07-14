@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#define MAX_LEN 100
+
+int line_len(char c[], int nmax);
+
+int main(){
+	char line[MAX_LEN];
+
+
+	printf("length is %d\n",line_len(line,MAX_LEN));
+	printf("string is %s",line);
+	
+	return 0;
+}
+
+int line_len(char c[], int nmax){
+	char n;
+	int i = 0;
+
+	while(((n = getchar()) != EOF) && (n != '\n')&&(i < nmax-1)){
+		c[i++] = n;
+		
+	}
+	c[i+1]= '\0';
+	return i;
+}
